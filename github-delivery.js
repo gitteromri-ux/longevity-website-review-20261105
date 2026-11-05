@@ -41,4 +41,5 @@ if(location.hostname.endsWith('github.io')){
    document.querySelector('#review-receipt').innerHTML='Your review is too long for a prefilled URL. It was downloaded as Markdown. <a class="open" target="_blank" rel="noopener" href="'+esc(url)+'">Open GitHub review</a> Paste the review text into the issue and submit. No comments were discarded.';
   }
  };
+ window.githubReviewReady=true;
 }

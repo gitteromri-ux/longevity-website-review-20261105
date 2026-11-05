@@ -68,4 +68,4 @@ async function loadDraft(){
  }catch(e){status('Online saving unavailable. You can still edit and download a backup. '+e.message,true)}
  finally{sendButton.disabled=false;previewButton.disabled=false}
 }
-const waitCollections=setInterval(()=>{if(reviewCollections.com.data.length&&reviewCollections.master.data.length){clearInterval(waitCollections);loadDraft()}},80);
+const waitCollections=setInterval(()=>{if(reviewCollections.com.data.length&&reviewCollections.master.data.length&&(!location.hostname.endsWith('github.io')||window.githubReviewReady)){clearInterval(waitCollections);loadDraft()}},80);
