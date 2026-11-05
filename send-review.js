@@ -21,7 +21,7 @@ function queueSave(){editCounter++;requestId=null;status('Saving changes…');cl
 document.addEventListener('input',e=>{if(e.target.matches('textarea,.fold-order'))queueSave()});
 document.addEventListener('change',e=>{if(e.target.matches('.include-fold'))queueSave()});
 persistFolds=function(){try{localStorage.setItem(FOLDKEY,JSON.stringify(foldNotes))}catch(e){}renderSequence()};
-function errorsFor(c){const rows=Object.values(c.notes).filter(x=>x&&x.selected);const orders=rows.map(x=>Number(x.order));if(rows.length>12)return c.name+': select no more than 12 folds.';if(orders.some(n=>!Number.isInteger(n)||n<1||n>12))return c.name+': give every selected fold a position from 1–12.';if(new Set(orders).size!==orders.length)return c.name+': two selected folds have the same position. Assign different numbers.';return ''}
+function errorsFor(c){const rows=Object.values(c.notes).filter(x=>x&&x.selected);const orders=rows.map(x=>Number(x.order));if(rows.length>16)return c.name+': select no more than 16 folds.';if(orders.some(n=>!Number.isInteger(n)||n<1||n>16))return c.name+': give every selected fold a position from 1–16.';if(new Set(orders).size!==orders.length)return c.name+': two selected folds have the same position. Assign different numbers.';return ''}
 function validateReview(){return Object.values(reviewCollections).map(errorsFor).filter(Boolean).join(' ')}
 function finalHtml(data){
  let html='<h2>Pages.dev screenshot comments</h2>';

@@ -7,7 +7,7 @@ function combinedItems(){
  return [...dev,...other];
 }
 function combinedSelected(){return combinedItems().filter(f=>f.selected).sort((a,b)=>(Number(a.order)||99)-(Number(b.order)||99))}
-function combinedError(){const a=combinedSelected(),n=a.map(f=>Number(f.order));if(a.length>12)return 'Select at most 12 sections in total across all tabs.';if(n.some(x=>!Number.isInteger(x)||x<1||x>12))return 'Every selected section needs a final position from 1–12.';if(new Set(n).size!==n.length)return 'Two sections have the same final position. Positions must be unique across ALL tabs.';return ''}
+function combinedError(){const a=combinedSelected(),n=a.map(f=>Number(f.order));if(a.length>16)return 'Select at most 16 sections in total across all tabs.';if(n.some(x=>!Number.isInteger(x)||x<1||x>16))return 'Every selected section needs a final position from 1–16.';if(new Set(n).size!==n.length)return 'Two sections have the same final position. Positions must be unique across ALL tabs.';return ''}
 validateReview=combinedError;
 function rememberState(){try{localStorage.setItem(DEVSELECTKEY,JSON.stringify(devSelections));for(const c of Object.values(reviewCollections))localStorage.setItem(c.key,JSON.stringify(c.notes));localStorage.setItem(KEY,JSON.stringify(notes))}catch(e){}}
 function stateFor(source,key){const obj=source==='dev'?devSelections:reviewCollections[source].notes;if(!obj[key])obj[key]={selected:false,order:'',comment:''};return obj[key]}
@@ -16,8 +16,8 @@ function wireSelection(card,source,key){
  const s=stateFor(source,key);checkbox.checked=!!s.selected;order.value=s.order||'';
  function update(){const current=stateFor(source,key);current.selected=checkbox.checked;current.order=order.value;card.classList.toggle('selected',current.selected);rememberState();renderSequence()}
  checkbox.onchange=()=>{
-  if(checkbox.checked&&!s.selected&&combinedSelected().length>=12){checkbox.checked=false;toast('12 selected already. Uncheck a section before adding another.');return}
-  if(checkbox.checked&&!s.selected){const used=new Set(combinedSelected().map(f=>Number(f.order)));if(!order.value||used.has(Number(order.value)))order.value=Array.from({length:12},(_,i)=>i+1).find(x=>!used.has(x))||''}
+  if(checkbox.checked&&!s.selected&&combinedSelected().length>=16){checkbox.checked=false;toast('16 selected already. Uncheck a section before adding another.');return}
+  if(checkbox.checked&&!s.selected){const used=new Set(combinedSelected().map(f=>Number(f.order)));if(!order.value||used.has(Number(order.value)))order.value=Array.from({length:16},(_,i)=>i+1).find(x=>!used.has(x))||''}
   update();
  };
  order.oninput=update;
@@ -26,7 +26,7 @@ function wireSelection(card,source,key){
 function devControls(){
  document.querySelectorAll('#cards .card').forEach((card,i)=>{
   let area=card.querySelector('.dev-select-controls');
-  if(!area){area=document.createElement('div');area.className='fold-controls dev-select-controls';area.innerHTML='<label><input type="checkbox" class="include-fold"> Include in final website</label><label>Final position <input class="fold-order" type="number" min="1" max="12" step="1" placeholder="1–12" aria-label="Final position for uploaded screenshot '+(i+1)+'"></label>';card.querySelector('.note h2').after(area)}
+  if(!area){area=document.createElement('div');area.className='fold-controls dev-select-controls';area.innerHTML='<label><input type="checkbox" class="include-fold"> Include in final website</label><label>Final position <input class="fold-order" type="number" min="1" max="16" step="1" placeholder="1–16" aria-label="Final position for uploaded screenshot '+(i+1)+'"></label>';card.querySelector('.note h2').after(area)}
   wireSelection(card,'dev',files[i]);
  });
 }
@@ -42,7 +42,7 @@ renderFolds=function(){
 const combinedStatus=document.createElement('p');combinedStatus.id='combined-status';combinedStatus.style.cssText='color:#a9cfff;font-weight:600';document.querySelector('header').append(combinedStatus);
 renderSequence=function(){
  const a=combinedSelected(),error=combinedError();
- const wording=error||`${a.length} / 12 selected for ONE final website across all three tabs.`;
+ const wording=error||`${a.length} / 16 selected for ONE final website across all three tabs.`;
  document.querySelector('#combined-status').textContent=wording;
  const s=document.querySelector('#fold-status');s.textContent=wording;s.classList.toggle('invalid',!!error);
  document.querySelector('#sequence').innerHTML=a.map(f=>`<span class="sequence-item">${esc(f.order||'?')}. ${esc(f.sourceName)}: ${esc(f.title)}</span>`).join('');
@@ -52,10 +52,10 @@ changeReviewTab=function(kind){
  oldChangeTab(kind);
  document.querySelector('#progress').hidden=true;
  document.querySelector('h1').textContent='Build one website from all three.';
- document.querySelector('header>p').textContent='Mix any section from Pages.dev, the dot-com homepage and Masterclass. Select sections, assign one shared order from 1–12, and add your exact comments.';
+ document.querySelector('header>p').textContent='Mix any section from Pages.dev, the dot-com homepage and Masterclass. Select sections, assign one shared order from 1–16, and add your exact comments.';
  if(kind!=='dev'){
   document.querySelector('.fold-intro h2').textContent='Select from '+reviewCollections[kind].name;
-  document.querySelector('.fold-intro>p').textContent='Your selections join ONE combined website. Use final positions 1–12 across all three tabs. Nothing is deleted or changed on the live websites.';
+  document.querySelector('.fold-intro>p').textContent='Your selections join ONE combined website. Use final positions 1–16 across all three tabs. Nothing is deleted or changed on the live websites.';
  }
  devControls();renderSequence();
 };
@@ -106,8 +106,19 @@ document.querySelector('#import').onchange=async e=>{
  try{const data=JSON.parse(await e.target.files[0].text());if(!data.notes||typeof data.notes!=='object')throw Error();applyReviewData(data);queueSave();toast('All three tabs and the combined sequence restored.')}catch(e){toast('Choose a valid review backup.')}e.target.value='';
 };
 loadDraft=async function(){
- try{const r=await api('/draft');if(r.draft&&editCounter===0){applyReviewData(r.draft);status('Saved combined review restored.')}else{devControls();renderSequence();status('Ready. Comments and selections autosave here.');if(editCounter)queueSave()}}
- catch(e){status('Online saving unavailable. Download a backup before closing. '+e.message,true)}
+ try{const r=await api('/draft');if(r.draft&&editCounter===0){applyReviewData(r.draft);status('Saved combined review restored. Use Load Claude\'s selection to see Claude\'s picks.')}else{try{const pr=await fetch('claude-selection.json',{cache:'no-store'});if(pr.ok&&editCounter===0){applyReviewData(await pr.json());status('Claude\'s selection and comments loaded. Edit anything; it saves in this browser.')}}catch(_){}devControls();renderSequence();status('Ready. Comments and selections autosave here.');if(editCounter)queueSave()}}
+ catch(e){status('Online saving unavailable. Download a backup before closing. '+e.message,true);try{const pr=await fetch('claude-selection.json',{cache:'no-store'});if(pr.ok&&editCounter===0){applyReviewData(await pr.json());renderSequence()}}catch(_){}}
  finally{sendButton.disabled=false;previewButton.disabled=false}
 };
 devControls();renderSequence();
+
+/* Load Claude's fold selection and comments (claude-selection.json) on request. */
+(function(){
+ const bar=document.querySelector('.actions');if(!bar)return;
+ const b=document.createElement('button');b.id='load-claude';b.textContent="Load Claude's selection";
+ b.onclick=async()=>{
+  if(!confirm("Replace the selection and comments in this browser with Claude's selection? Download a backup first if you want to keep yours."))return;
+  try{const r=await fetch('claude-selection.json',{cache:'no-store'});applyReviewData(await r.json());if(typeof queueSave==='function')queueSave();toast("Claude's selection loaded.")}catch(e){toast("Could not load Claude's selection.")}
+ };
+ bar.insertBefore(b,bar.children[1]||null);
+})();

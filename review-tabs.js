@@ -23,11 +23,11 @@ function changeReviewTab(kind){
  for(const t of ['dev','com','master'])document.querySelector('#tab-'+t).setAttribute('aria-selected',String(t===kind));
  document.querySelector('#progress').hidden=!isDev;
  document.querySelector('h1').textContent=isDev?'Your screenshots. Your exact comments.':c.heading;
- document.querySelector('header>p').textContent=isDev?'11 original Pages.dev screenshots, in upload order. Write the exact change beside each image.':c.name+' only. Select sections, assign positions 1–12 and add your exact comments.';
+ document.querySelector('header>p').textContent=isDev?'11 original Pages.dev screenshots, in upload order. Write the exact change beside each image.':c.name+' only. Select sections, assign positions 1–16 and add your exact comments.';
  if(!isDev){
   FOLDKEY=c.key;foldData=c.data;foldNotes=c.notes;
   document.querySelector('.fold-intro h2').textContent=kind==='master'?'Build your final Masterclass page':'Build your final homepage';
-  document.querySelector('.fold-intro>p').textContent='Each card is one complete section of '+c.name+'. Check sections to include, assign unique positions 1–12, and add your exact instructions. Unchecked sections stay out of your final sequence.';
+  document.querySelector('.fold-intro>p').textContent='Each card is one complete section of '+c.name+'. Check sections to include, assign unique positions 1–16, and add your exact instructions. Unchecked sections stay out of your final sequence.';
   renderFolds();
  }
 }
@@ -42,8 +42,8 @@ function collectionMarkdown(c){
  const all=c.data.map(f=>({...f,selected:false,order:'',comment:'',...(c.notes[f.image]||{})}));
  const selected=all.filter(f=>f.selected).sort((a,b)=>(Number(a.order)||99)-(Number(b.order)||99));
  const orders=selected.map(f=>Number(f.order));
- const invalid=selected.length>12||orders.some(n=>!Number.isInteger(n)||n<1||n>12)||new Set(orders).size!==orders.length;
- return '\n# '+c.name+': final version\n\n'+(invalid?'ORDER NEEDS REVIEW: use unique positions 1–12.\n\n':'')+
+ const invalid=selected.length>16||orders.some(n=>!Number.isInteger(n)||n<1||n>16)||new Set(orders).size!==orders.length;
+ return '\n# '+c.name+': final version\n\n'+(invalid?'ORDER NEEDS REVIEW: use unique positions 1–16.\n\n':'')+
  (selected.map(f=>`## Position ${f.order}: ${f.title}\nOriginal section ${f.i+1}; image: ${f.image}\n\n${f.comment||'[No comment entered]'}\n`).join('\n')||'[No sections selected]\n')+
  '\n## Excluded sections\n\n'+all.filter(f=>!f.selected).map(f=>`### Original section ${f.i+1}: ${f.title}\n${f.comment||'[No comment entered]'}\n`).join('\n');
 }

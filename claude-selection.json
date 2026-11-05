@@ -1,0 +1,120 @@
+{
+ "version": 4,
+ "notes": {},
+ "foldNotes": {
+  "folds/fold-01.png": {
+   "selected": true,
+   "order": "1",
+   "comment": "Replace this hero with the pages.dev hero exactly: full-screen moving cells video, Julie's approved 4K film on the right, Trustpilot pill, 'Slow down your pace of aging.' Button: Enroll now. Whole site, every fold: longevitylifeacademy.com design and components. Reading text 18px or more on phone and desktop, labels 14px or more. No card set in one colour: each card its own accent. Phones: card sets swipe sideways to keep scrolling short; desktop: grids. Crisp logo on every device. WhatsApp button and the .com floating bar kept, the floating bar carries the offer: November offer, 55% off month one, $79 Month 1. Every button works, every FAQ answer opens in full, Enroll opens eTeacher's existing checkout unchanged."
+  },
+  "folds/fold-02.png": {
+   "selected": true,
+   "order": "2",
+   "comment": "Keep the motion videos. Each pillar card its own accent colour. Card text 17px or more. Phones: swipe slider."
+  },
+  "folds/fold-03.png": {
+   "selected": true,
+   "order": "3",
+   "comment": "Phones: the four phases as a 2 x 2 grid, sessions as a tap-to-open list. Text 17px or more."
+  },
+  "folds/fold-05.png": {
+   "selected": true,
+   "order": "5",
+   "comment": "Julie bonus is free with enrollment. Remove both codes and the $99. Button: Enroll now. Text 18px or more."
+  },
+  "folds/fold-06.png": {
+   "selected": true,
+   "order": "6",
+   "comment": "Keep the five coloured cards. Card 04 tag: Included (no $99). Larger text. Phones: swipe slider."
+  },
+  "folds/fold-07.png": {
+   "selected": true,
+   "order": "7",
+   "comment": "Replace with a compact, advanced CGM fold about half this height: Lingo app and box with a moving glucose curve and 3 short facts in coloured chips. No wasted space."
+  },
+  "folds/fold-11.png": {
+   "selected": true,
+   "order": "8",
+   "comment": "Keep the slider. Each step card its own accent colour, larger text."
+  },
+  "folds/fold-12.png": {
+   "selected": true,
+   "order": "9",
+   "comment": "This is Longevity news (the homepage blog strip). Keep the 3 video cards linking to the articles. Phones: swipe slider. Larger text."
+  },
+  "folds/fold-13.png": {
+   "selected": true,
+   "order": "10",
+   "comment": "Keep. Each card its own accent colour, larger text. Phones: swipe slider."
+  },
+  "folds/fold-08.png": {
+   "selected": true,
+   "order": "11",
+   "comment": "eTeacher's, keep the content. Text 19 to 20px, stats larger."
+  },
+  "folds/fold-10.png": {
+   "selected": true,
+   "order": "12",
+   "comment": "Jordan Lattimore: face higher in the card. Bios 16.5px or more. Phones: swipe slider."
+  },
+  "folds/fold-16.png": {
+   "selected": true,
+   "order": "13",
+   "comment": "Each review card its own accent colour, larger text. Phones: swipe slider."
+  },
+  "folds/fold-18.png": {
+   "selected": true,
+   "order": "14",
+   "comment": "Cost answer: November offer, $79 first month, then $169 a month for four months, no codes. Every answer opens in full. Text 17.5px or more."
+  },
+  "folds/fold-19.png": {
+   "selected": true,
+   "order": "15",
+   "comment": "Keep the video. Button: Enroll now, not Apply."
+  },
+  "folds/fold-04.png": {
+   "selected": false,
+   "order": "",
+   "comment": "Not used: replaced by the masterclass pricing card (position 4)."
+  },
+  "folds/fold-09.png": {
+   "selected": false,
+   "order": "",
+   "comment": "Partner logo strip: kept under About as on .com."
+  },
+  "folds/fold-14.png": {
+   "selected": false,
+   "order": "",
+   "comment": "Not used: hover-only diagram does not work on phones."
+  },
+  "folds/fold-15.png": {
+   "selected": false,
+   "order": "",
+   "comment": "Not used: bio-age quiz stays out of the buying path."
+  },
+  "folds/fold-17.png": {
+   "selected": false,
+   "order": "",
+   "comment": "Not used: Apply form. Enroll opens eTeacher's existing checkout instead."
+  }
+ },
+ "masterNotes": {
+  "masterclass/fold-04.png": {
+   "selected": true,
+   "order": "4",
+   "comment": "Use this exact card design (blue VIP card) for the Blueprint. November offer, 55% off month one. $79 with $169 struck, Month 1, The Longevity Blueprint on one row. Only 4 bullets, about 24px: then $169 a month for 4 months; free Abbott Lingo CGM; Julie's VIP Masterclass, Nov 14; $100 cash back. 14-day try-out refund as one line of text. One button: Enroll now. No $755, $845, coupon box or credit column. No empty space."
+  },
+  "masterclass/fold-07.png": {
+   "selected": false,
+   "order": "",
+   "comment": "Not used: Longevity news is the homepage Deep Dives fold (.com 12)."
+  },
+  "masterclass/fold-08.png": {
+   "selected": false,
+   "order": "",
+   "comment": "Not used: Longevity news is the homepage Deep Dives fold (.com 12)."
+  }
+ },
+ "devSelections": {},
+ "source": "Claude's selection, 2026-11-05"
+}
