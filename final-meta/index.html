@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Longevity Blueprint | Your personal longevity protocol in 18 weeks</title>
+<meta name="description" content="Live 18-week longevity course in small groups. $79 your first month, 55% off. Free Abbott Lingo CGM. Bonus: Julie Gibson Clark's VIP Masterclass on November 14.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/codec-pro" rel="stylesheet">
+<style>
+:root{
+  --navy:#061633;--navy-2:#0A2240;--ink:#0B1B33;--ink-2:#29385A;--ink-3:#5B6B8C;--blue:#006EFF;--blue-deep:#0047B3;--sky:#9CC8FF;--cyan:#8FE3FF;
+  --ice:#F3F7FF;--line:rgba(10,30,58,.1);--white:#fff;
+  --serif:'Playfair Display',Georgia,serif;--ui:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--num:'Codec Pro','Inter',sans-serif;--accent:'Instrument Serif','Playfair Display',Georgia,serif;
+  --wrap:1180px;--gut:clamp(20px,4vw,48px);--r:26px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;font-family:var(--ui);font-size:18px;line-height:1.6;color:var(--ink-2);background:#fff;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.eyebrow{font-family:var(--ui);font-size:17px;font-weight:700;letter-spacing:.01em;color:var(--blue)}
+.dark .eyebrow{color:var(--cyan)}
+h1,h2,h3{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--ink);letter-spacing:-.01em;margin:0}
+h2{font-size:clamp(40px,5.2vw,68px);line-height:1.06}
+h2 b{font-weight:400;color:var(--blue)}
+.dark h2{color:#fff}.dark h2 b{color:var(--cyan)}
+.lead{font-size:clamp(18px,1.6vw,21px);line-height:1.6;color:var(--ink-3);max-width:60ch}
+.dark .lead{color:#B7C7E3}
+section{padding:clamp(72px,9vw,120px) 0}
+.dark{background:radial-gradient(70% 60% at 85% 0%,rgba(0,110,255,.28),transparent 60%),linear-gradient(180deg,var(--navy) 0%,#04102A 100%);color:#DCE6F7}
+.head{max-width:820px;margin:0 0 48px}
+.head.center{margin:0 auto 52px;text-align:center}.head.center .lead{margin-left:auto;margin-right:auto}
+.head h2{margin:14px 0 18px}
+
+/* buttons, masterclass style */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:58px;padding:16px 28px;border-radius:14px;font-family:var(--ui);font-weight:700;font-size:17px;text-decoration:none;cursor:pointer;border:0;transition:transform .25s,box-shadow .25s,filter .25s}
+.btn-blue{background:linear-gradient(180deg,#4DA3FF 0%,#006EFF 58%,#0059D6 100%);color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.45) inset,0 -1px 0 rgba(0,0,0,.25) inset,0 2px 3px rgba(0,20,60,.35),0 14px 30px -10px rgba(0,110,255,.8)}
+.btn-blue:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.btn-ghost{background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.3)}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn .arr{font-size:22px;line-height:1}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:rgba(6,22,51,.92);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
+.logo img{height:44px;width:auto}
+.nav{display:flex;gap:30px;align-items:center}
+.nav a{font-size:16px;font-weight:600;color:#DCE6F7;text-decoration:none}
+.nav a:hover{color:#fff}
+.nav .btn{min-height:46px;padding:10px 20px;font-size:16px}
+@media(max-width:900px){.nav a:not(.btn){display:none}.logo img{height:38px}.top .wrap{height:68px}}
+
+/* hero */
+.hero{position:relative;padding:clamp(56px,7vw,96px) 0 clamp(64px,8vw,110px);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{color:#fff;font-size:clamp(46px,6.4vw,86px);line-height:1.02;margin:18px 0 22px}
+.hero h1 span{color:var(--cyan)}
+.hero .lead{color:#C9D7EE;margin:0 0 26px}
+.offer-line{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:0 0 30px}
+.offer-chip{display:inline-flex;align-items:baseline;gap:10px;padding:12px 18px;border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.05));border:1px solid rgba(143,227,255,.35);color:#fff;font-size:17px}
+.offer-chip b{font-family:var(--num);font-size:30px;font-weight:800;letter-spacing:-.03em}
+.offer-chip s{color:#8EA6CB}
+.offer-note{font-size:16px;color:#B7C7E3}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.trust{display:flex;align-items:center;gap:12px;margin-top:28px;font-size:15px;color:#B7C7E3}
+.stars{display:inline-flex;gap:3px}.stars i{width:20px;height:20px;background:#00B67A;display:inline-block;clip-path:polygon(50% 8%,61% 38%,94% 38%,67% 57%,77% 89%,50% 70%,23% 89%,33% 57%,6% 38%,39% 38%)}
+.hero-media{position:relative;border-radius:28px;overflow:hidden;box-shadow:0 40px 90px -40px rgba(0,0,0,.8),0 0 0 1px rgba(143,227,255,.18)}
+.hero-media img{width:100%;height:auto;aspect-ratio:4/4.6;object-fit:cover;object-position:60% center}
+.bonus-tag{position:absolute;left:18px;right:18px;bottom:18px;display:flex;gap:14px;align-items:center;padding:14px 16px;border-radius:18px;background:rgba(6,22,51,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(143,227,255,.3);color:#fff;font-size:15px;line-height:1.4}
+.bonus-tag img{width:54px;height:54px;border-radius:50%;object-fit:cover;flex:none;border:2px solid rgba(255,255,255,.7)}
+.bonus-tag b{display:block;font-size:16px}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:34px}.hero-media img{aspect-ratio:4/3.7;object-position:center 62%}.hero-ctas .btn{flex:1 1 100%}}
+
+/* value */
+.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.vcard{position:relative;padding:30px 28px;border-radius:var(--r);background:linear-gradient(165deg,#fff 0%,#F3F7FD 60%,#E8F0FB 100%);box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 30px 70px -40px rgba(10,34,64,.45),0 2px 8px -2px rgba(10,34,64,.08);border:1px solid rgba(0,110,255,.1)}
+.vcard .n{font-family:var(--accent);font-style:italic;font-size:34px;color:var(--blue);line-height:1}
+.vcard h3{font-family:var(--ui);font-style:normal;font-weight:700;font-size:21px;line-height:1.3;color:var(--ink);margin:14px 0 8px;letter-spacing:-.01em}
+.vcard p{margin:0;font-size:17px;color:var(--ink-3)}
+.vcard.feature{background:radial-gradient(90% 70% at 100% 0%,rgba(124,196,255,.5),transparent 55%),linear-gradient(160deg,#0B3B8F 0%,#0A56D8 48%,#006EFF 100%);border:0;color:#fff}
+.vcard.feature h3,.vcard.feature .n{color:#fff}.vcard.feature p{color:#DCEBFF}
+.refund-line{margin:34px 0 0;text-align:center;font-size:18px;color:var(--ink-3)}
+.refund-line b{color:var(--ink)}
+@media(max-width:900px){.value-grid{grid-template-columns:1fr}}
+
+/* pricing, masterclass card */
+.pricing .wrap{display:grid;grid-template-columns:1fr 560px;gap:56px;align-items:center}
+.pk-card{position:relative;display:flex;flex-direction:column;padding:32px 34px 32px;border-radius:26px;isolation:isolate;overflow:hidden;color:#fff;
+  background:radial-gradient(90% 70% at 100% 0%,rgba(124,196,255,.55),transparent 55%),radial-gradient(70% 50% at 0% 100%,rgba(143,227,255,.28),transparent 60%),linear-gradient(160deg,#0B3B8F 0%,#0A56D8 48%,#006EFF 100%);
+  box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 2px 4px rgba(0,20,60,.3),0 40px 90px -30px rgba(0,60,180,.75)}
+.pk-card::after{content:"";position:absolute;right:-90px;top:-90px;width:300px;height:300px;border-radius:50%;z-index:0;pointer-events:none;background:radial-gradient(circle,rgba(255,255,255,.35),transparent 65%);filter:blur(18px)}
+.pk-card>*{position:relative;z-index:1}
+.pk-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.pk-tier,.pk-len{white-space:nowrap}
+@media(max-width:420px){.pk-top{flex-wrap:wrap;justify-content:flex-start;gap:10px}.pk-tier{font-size:15px;letter-spacing:.01em}.pk-len{font-size:13px;padding:6px 11px}}
+.pk-tier{font-size:16px;font-weight:700;letter-spacing:.01em;color:#fff;display:inline-flex;align-items:center;gap:9px}
+.pk-tier::before{content:"";width:7px;height:7px;border-radius:50%;background:#8FE3FF;box-shadow:0 0 0 3px rgba(143,227,255,.25),0 0 12px rgba(143,227,255,1)}
+.pk-len{font-size:14px;font-weight:700;letter-spacing:.02em;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.32)}
+.pk-price-row{display:flex;align-items:flex-end;gap:16px;margin-top:22px;flex-wrap:wrap}
+.pk-price{font-family:var(--num);font-weight:800;font-size:clamp(72px,7vw,96px);line-height:.9;letter-spacing:-.05em;color:#fff;display:flex;align-items:flex-start;text-shadow:0 2px 0 rgba(0,40,120,.35),0 12px 40px rgba(0,0,0,.35)}
+.pk-price sup{font-size:.42em;line-height:1;margin-top:.22em;margin-right:.06em;font-weight:700}
+.pk-was{display:flex;flex-direction:column;gap:4px;padding-bottom:8px;font-size:17px;color:#DCEBFF}
+.pk-was s{font-family:var(--num);font-weight:700;font-size:24px;color:#BFD7F7}
+.pk-title{margin:16px 0 0;font-family:var(--num);font-style:normal;font-weight:700;font-size:clamp(23px,2vw,27px);letter-spacing:-.02em;line-height:1.2;color:#fff}
+.pk-title em{font-family:var(--accent);font-style:italic;font-weight:400;color:#BFE3FF}
+.pk-spec{margin:22px 0 26px;display:grid}
+.pk-spec>div{display:grid;grid-template-columns:110px 1fr;gap:16px;align-items:baseline;padding:12px 0;border-top:1px solid rgba(255,255,255,.18)}
+.pk-spec>div:first-child{border-top:0;padding-top:0}
+.pk-spec dt{font-size:15px;font-weight:700;letter-spacing:.01em;color:#BFD7F7;margin:0}
+.pk-spec dd{margin:0;font-size:16.5px;line-height:1.45;font-weight:500;color:#fff}
+.pk-ul{margin:0;padding:0;list-style:none;display:grid;gap:6px}
+.pk-ul li{position:relative;padding-left:20px}
+.pk-ul li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;border-radius:50%;background:#8FE3FF;box-shadow:0 0 8px rgba(143,227,255,.9)}
+.pk-btn{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:auto;padding:18px 22px;min-height:60px;border-radius:14px;font-weight:700;font-size:18px;text-decoration:none;background:linear-gradient(180deg,#FFFFFF 0%,#EAF3FF 100%);color:#0047B3;box-shadow:0 1px 0 #fff inset,0 -1px 0 rgba(0,40,120,.15) inset,0 2px 3px rgba(0,20,60,.35),0 14px 30px -10px rgba(0,20,60,.6),0 0 40px -6px rgba(143,227,255,.55);transition:transform .25s}
+.pk-btn:hover{transform:translateY(-2px)}
+.pk-btn .arr{font-size:22px}
+.pk-foot{margin:18px 0 0;font-size:15px;line-height:1.5;color:#DCEBFF;text-align:center}
+.pay-logos{display:flex;gap:10px;justify-content:center;margin-top:12px;flex-wrap:wrap}
+.pay-logos span{font-size:13px;font-weight:800;letter-spacing:.06em;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);color:#fff}
+.price-side h2{margin:14px 0 18px}
+.price-side ul{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:14px}
+.price-side li{display:flex;gap:14px;align-items:flex-start;font-size:18px;color:#DCE6F7}
+.price-side li::before{content:"";flex:none;width:22px;height:22px;margin-top:3px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#8FE3FF,#006EFF);box-shadow:0 0 12px rgba(77,163,255,.8)}
+@media(max-width:980px){.pricing .wrap{grid-template-columns:1fr;gap:36px}.pk-card{padding:28px 22px}.pk-spec>div{grid-template-columns:92px 1fr;gap:12px}}
+
+/* julie */
+.julie{position:relative;padding:0;background:#050c1c;color:#fff;overflow:hidden}
+.julie-bg{position:absolute;inset:0;background:url(img/julie-wide.jpg) right center/cover no-repeat}
+.julie-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#050c1c 0%,#050c1c 34%,rgba(5,12,28,.6) 58%,rgba(5,12,28,0) 80%)}
+.julie .wrap{position:relative;padding-top:clamp(80px,10vw,130px);padding-bottom:clamp(80px,10vw,130px)}
+.julie-copy{max-width:580px}
+.julie h2{color:#fff;margin:14px 0 20px}
+.julie h2 b{color:var(--cyan);font-weight:400}
+.julie .lead{color:#C9D7EE}
+.facts{display:grid;gap:0;margin:26px 0 30px;border-top:1px solid rgba(255,255,255,.16)}
+.facts div{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.16);font-size:17px}
+.facts dt{font-size:15px;font-weight:700;letter-spacing:.01em;color:#9DBDF0}
+.facts dd{margin:0;color:#fff}
+.julie-note{margin-top:20px;font-size:15.5px;color:#9DB0CF}
+.julie-mobile-img{display:none}
+@media(max-width:900px){.julie-bg{display:none}.julie-mobile-img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;object-position:70% center}.julie .wrap{padding-top:36px}.facts div{grid-template-columns:96px 1fr}}
+
+/* syllabus */
+.phases{display:grid;gap:16px}
+.phase{border-radius:22px;background:#fff;border:1px solid var(--line);box-shadow:0 20px 50px -40px rgba(10,34,64,.5);overflow:hidden}
+.phase summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;padding:24px 26px}
+.phase summary::-webkit-details-marker{display:none}
+.phase .pn{font-family:var(--accent);font-style:italic;font-size:40px;line-height:1;color:var(--blue)}
+.phase .pt{font-family:var(--serif);font-style:italic;font-size:clamp(24px,2.4vw,30px);color:var(--ink);line-height:1.15}
+.phase .ps{display:block;font-family:var(--ui);font-style:normal;font-size:15px;font-weight:600;color:var(--ink-3);margin-top:4px}
+.phase .pi{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--blue);font-size:22px;transition:transform .25s}
+.phase[open] .pi{transform:rotate(45deg)}
+.phase ol{margin:0;padding:0 26px 22px 26px;list-style:none;display:grid;gap:0;counter-reset:s}
+.phase li{display:grid;grid-template-columns:44px 1fr;gap:8px;padding:13px 0;border-top:1px solid var(--line);font-size:17.5px;color:var(--ink)}
+.phase li span{font-weight:700;color:var(--blue)}
+
+/* cgm */
+.cgm .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.cgm-imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cgm-imgs img{border-radius:20px;width:100%;aspect-ratio:1/1;object-fit:cover}
+.cgm-imgs img:first-child{grid-column:1/-1;aspect-ratio:16/10}
+.checks{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;font-size:18px;color:var(--ink-2)}
+.checks li::before{content:"";flex:none;width:22px;height:22px;margin-top:3px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#8FE3FF,#006EFF)}
+@media(max-width:900px){.cgm .wrap{grid-template-columns:1fr;gap:32px}}
+
+/* faculty */
+.fac-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.fac{border-radius:22px;background:#fff;border:1px solid var(--line);overflow:hidden;box-shadow:0 20px 50px -40px rgba(10,34,64,.5)}
+.fac .ph{aspect-ratio:1/1;overflow:hidden;background:#E8EEF7}
+.fac .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.fac .ph img.jordan{transform:scale(1.22);transform-origin:50% 72%;object-position:50% 40%}
+.fac .tx{padding:16px 16px 20px}
+.fac h3{font-family:var(--ui);font-style:normal;font-weight:700;font-size:18px;color:var(--ink);line-height:1.25}
+.fac p{margin:6px 0 0;font-size:15px;line-height:1.45;color:var(--ink-3)}
+.fac.julie-card{border:2px solid rgba(0,110,255,.35)}
+@media(max-width:1000px){.fac-grid{grid-template-columns:repeat(2,1fr);gap:14px}.fac .tx{padding:14px}.fac h3{font-size:17px}}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stat{padding:26px 22px;border-radius:22px;background:rgba(255,255,255,.06);border:1px solid rgba(143,227,255,.2)}
+.stat b{display:block;font-family:var(--num);font-weight:800;font-size:40px;letter-spacing:-.03em;color:#fff;line-height:1}
+.stat span{display:block;margin-top:8px;font-size:15px;font-weight:600;color:#9DBDF0;letter-spacing:.04em}
+.powered{display:flex;align-items:center;gap:14px;margin-top:26px;font-size:15px;color:#9DB0CF}
+.powered img{height:34px;width:auto}
+@media(max-width:900px){.about .wrap{grid-template-columns:1fr;gap:32px}}
+
+/* faq */
+.faq-list{max-width:860px;margin:0 auto;display:grid;gap:12px}
+.faq-list details{border-radius:18px;background:#fff;border:1px solid var(--line)}
+.faq-list summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:22px 24px;font-weight:700;font-size:18.5px;color:var(--ink)}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";font-size:26px;font-weight:400;color:var(--blue);transition:transform .25s}
+.faq-list details[open] summary::after{transform:rotate(45deg)}
+.faq-list p{margin:0;padding:0 24px 22px;font-size:17px;color:var(--ink-3)}
+
+/* final */
+.final{text-align:center}
+.final h2{color:#fff}
+.final .lead{margin:18px auto 30px}
+.final small{display:block;margin-top:18px;font-size:15px;color:#9DB0CF}
+
+footer{background:#030a1a;color:#8EA6CB;padding:48px 0 120px;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer a{color:#B7C7E3;text-decoration:none;margin-right:18px}
+footer img{height:34px;width:auto}
+
+/* floating bar: the offer lives here, no coupon strip */
+.floater{position:fixed;z-index:60;left:50%;bottom:14px;transform:translate(-50%,140%);width:min(720px,calc(100% - 24px));display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 12px 12px 22px;border-radius:20px;background:rgba(6,22,51,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(143,227,255,.32);box-shadow:0 24px 60px -20px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.04) inset;transition:transform .45s cubic-bezier(.22,1,.36,1);color:#fff}
+.floater.show{transform:translate(-50%,0)}
+.floater .fl-txt{display:flex;flex-direction:column;line-height:1.25}
+.floater .fl-k{white-space:nowrap;font-size:14px;font-weight:700;letter-spacing:.01em;color:var(--cyan)}
+.floater .fl-v{font-size:17px;font-weight:600}
+.floater .fl-v b{font-family:var(--num);font-size:22px;font-weight:800;letter-spacing:-.02em}
+.floater .fl-v s{color:#8EA6CB;font-weight:500;margin-right:4px}
+.floater .btn{min-height:50px;padding:12px 20px;font-size:16px;white-space:nowrap}
+@media(max-width:420px){.floater{padding-left:16px}.floater .fl-k{font-size:13px;letter-spacing:.01em}.floater .fl-v{font-size:15px;white-space:nowrap}.floater .fl-v b{font-size:20px}.floater .btn{padding:12px 16px}}
+
+.preview-note{display:none;margin-top:12px;font-size:14px;color:#DCEBFF;text-align:center}
+.preview-note.show{display:block}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Longevity Life Academy"><img src="img/logo.png" alt="Longevity Life Academy" width="520" height="163"></a>
+    <nav class="nav">
+      <a href="#value">What you get</a>
+      <a href="#julie">Julie bonus</a>
+      <a href="#syllabus">Syllabus</a>
+      <a href="#faculty">Faculty</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-blue" href="#pricing">Enroll now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero dark">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">The Longevity Blueprint · Live online course</p>
+      <h1>Your personal longevity protocol, <span>built in 18 weeks.</span></h1>
+      <p class="lead">Live small-group classes with certified longevity instructors. A free Abbott Lingo glucose sensor shipped to your home. You finish with a written protocol built on your own numbers.</p>
+      <div class="offer-line">
+        <span class="offer-chip"><b>$79</b> your first month <s>$169</s></span>
+        <span class="offer-note">55% off month one. 14-day try-out refund.</span>
+      </div>
+      <div class="hero-ctas">
+        <a class="btn btn-blue" href="#pricing">Enroll now <span class="arr">&rarr;</span></a>
+        <a class="btn btn-ghost" href="#value">See what you get</a>
+      </div>
+      <div class="trust"><span class="stars"><i></i><i></i><i></i><i></i><i></i></span><span>4.6 out of 5 on Trustpilot, 600+ reviews</span></div>
+    </div>
+    <div class="hero-media">
+      <img src="img/hero.jpg" alt="Abbott Lingo glucose sensor and app, included in the course" width="1600" height="893">
+      <div class="bonus-tag"><img src="img/julie.jpg" alt="Julie Gibson Clark"><div><b>Bonus: Julie Gibson Clark's VIP Masterclass</b>Live on Zoom, Saturday, November 14. Free when you enroll.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="value">
+  <div class="wrap">
+    <div class="head center">
+      <p class="eyebrow">The November offer</p>
+      <h2>Everything you get, <b>for $79 your first month.</b></h2>
+      <p class="lead">Online sign-ups in November only.</p>
+    </div>
+    <div class="value-grid">
+      <article class="vcard feature"><div class="n">1</div><h3>Your personal longevity protocol, in 18 weeks</h3><p>Written on your own numbers and habits. Yours to keep.</p></article>
+      <article class="vcard"><div class="n">2</div><h3>Bonus: Julie Gibson Clark's VIP Masterclass</h3><p>Saturday, November 14, live on Zoom. The masterclass plus a private VIP Q&amp;A.</p></article>
+      <article class="vcard"><div class="n">3</div><h3>A free Abbott Lingo CGM</h3><p>Shipped to your home. From class 5, every lesson works on your own glucose data.</p></article>
+      <article class="vcard"><div class="n">4</div><h3>18 live classes in small groups</h3><p>One 50-minute class a week with 8 to 15 classmates. Every class is recorded.</p></article>
+      <article class="vcard"><div class="n">5</div><h3>Master the 6 pillars of longevity</h3><p>Nutrition, sleep, movement, supplements, stress and your protocol, with top instructors.</p></article>
+      <article class="vcard"><div class="n">6</div><h3>$100 cash back</h3><p>Towards your next Longevity Life Academy course.</p></article>
+    </div>
+    <p class="refund-line"><b>14-day try-out refund.</b> Not for you? Tell us within 14 days of registration and your course fee comes back.</p>
+  </div>
+</section>
+
+<section class="pricing dark" id="pricing">
+  <div class="wrap">
+    <div class="price-side">
+      <p class="eyebrow">One plan</p>
+      <h2>Start for <b>$79.</b></h2>
+      <p class="lead">Your first month is 55% off. After that it is $169 a month. Everything below is included, with nothing else to buy.</p>
+      <ul>
+        <li>Your class starts Monday, Nov 23 or Wednesday, Nov 25</li>
+        <li>Pay by card or PayPal, in US dollars</li>
+        <li>Full refund within 14 days of registration</li>
+      </ul>
+    </div>
+    <article class="pk-card">
+      <div class="pk-top"><span class="pk-tier">November offer</span><span class="pk-len">55% off month one</span></div>
+      <div class="pk-price-row">
+        <div class="pk-price"><sup>$</sup>79</div>
+        <div class="pk-was"><s>$169</s><span>your first month</span></div>
+      </div>
+      <h3 class="pk-title">The Longevity <em>Blueprint</em></h3>
+      <dl class="pk-spec">
+        <div><dt>Format</dt><dd>Live on Zoom, small groups of 8 to 15</dd></div>
+        <div><dt>Length</dt><dd>18 weekly classes, 50 minutes, all recorded</dd></div>
+        <div><dt>You get</dt><dd><ul class="pk-ul"><li>Your personal longevity protocol</li><li>A free Abbott Lingo CGM, shipped home</li><li>The 6 pillars of longevity, top instructors</li><li>$100 cash back on your next course</li></ul></dd></div>
+        <div><dt>Bonus</dt><dd>Julie Gibson Clark's VIP Masterclass, Nov 14</dd></div>
+        <div><dt>Starts</dt><dd>Mon, Nov 23 · 8:00 PM ET<br>or Wed, Nov 25 · 12:00 PM ET</dd></div>
+        <div><dt>Then</dt><dd>$169 a month</dd></div>
+      </dl>
+      <a class="pk-btn" href="#enroll" data-enroll><span>Enroll now</span><span class="arr" aria-hidden="true">&rarr;</span></a>
+      <p class="preview-note" id="previewNote">Preview: the checkout connects here once this design is approved.</p>
+      <p class="pk-foot">14-day try-out refund. Secure checkout.</p>
+      <div class="pay-logos"><span>Visa</span><span>Mastercard</span><span>Amex</span><span>PayPal</span></div>
+    </article>
+  </div>
+</section>
+
+<section class="julie" id="julie">
+  <div class="julie-bg" aria-hidden="true"></div>
+  <img class="julie-mobile-img" src="img/julie-wide.jpg" alt="Julie Gibson Clark">
+  <div class="wrap">
+    <div class="julie-copy">
+      <p class="eyebrow" style="color:#8FE3FF">Included free when you enroll</p>
+      <h2>Learn from the <b>2nd slowest-aging woman on earth.</b></h2>
+      <p class="lead">Julie Gibson Clark's verified pace of aging is 0.665: about eight months for every calendar year. In her VIP Masterclass she teaches her complete daily protocol.</p>
+      <dl class="facts">
+        <div><dt>When</dt><dd>Saturday, November 14, 1:00 PM ET</dd></div>
+        <div><dt>Where</dt><dd>Live on Zoom</dd></div>
+        <div><dt>Length</dt><dd>60-minute masterclass, then a private 30-minute VIP Q&amp;A</dd></div>
+        <div><dt>Price</dt><dd>Free with your Blueprint enrollment</dd></div>
+      </dl>
+      <a class="btn btn-blue" href="#pricing">Enroll and get your VIP seat <span class="arr">&rarr;</span></a>
+      <p class="julie-note">Julie hosts the masterclass. The 18-week course is taught by Longevity Life Academy's certified longevity faculty.</p>
+    </div>
+  </div>
+</section>
+
+<section id="syllabus" style="background:var(--ice)">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">The 18-week syllabus</p>
+      <h2>Four phases. <b>One protocol.</b></h2>
+      <p class="lead">One live class a week. Tap a phase to see every class.</p>
+    </div>
+    <div class="phases">
+      <details class="phase" open><summary><span class="pn">01</span><span><span class="pt">Foundation</span><span class="ps">Classes 1 to 3</span></span><span class="pi">+</span></summary>
+        <ol><li><span>1</span>Reframing aging: from disease avoidance to healthspan design</li><li><span>2</span>The longevity lens and your baseline self-assessment</li><li><span>3</span>Metabolic health: blood sugar as the central signal</li></ol></details>
+      <details class="phase"><summary><span class="pn">02</span><span><span class="pt">Data and discovery</span><span class="ps">Classes 4 to 7</span></span><span class="pi">+</span></summary>
+        <ol><li><span>4</span>Glucose variability and metabolic flexibility</li><li><span>5</span>Your glucose sensor: seeing the invisible</li><li><span>6</span>Nutrition framework: inputs and responses</li><li><span>7</span>Plate architecture: protein, fiber, processing</li></ol></details>
+      <details class="phase"><summary><span class="pn">03</span><span><span class="pt">Lifestyle systems</span><span class="ps">Classes 8 to 13</span></span><span class="pi">+</span></summary>
+        <ol><li><span>8</span>Fasting and meal timing for longevity</li><li><span>9</span>Gut health and the gut, brain and glucose axis</li><li><span>10</span>Movement as a glucose tool</li><li><span>11</span>Sleep, circadian rhythm and overnight glucose</li><li><span>12</span>Stress, emotions and non-food glucose spikes</li><li><span>13</span>Heart health: cardio fitness, cholesterol and the number one killer</li></ol></details>
+      <details class="phase"><summary><span class="pn">04</span><span><span class="pt">Integration and your Blueprint</span><span class="ps">Classes 14 to 18</span></span><span class="pi">+</span></summary>
+        <ol><li><span>14</span>Blood tests and reading your numbers</li><li><span>15</span>Supplements, tests and health tech literacy</li><li><span>16</span>Social health, purpose and longevity</li><li><span>17</span>Your personal longevity blueprint</li><li><span>18</span>Reflection, integration and your next 90 days</li></ol></details>
+    </div>
+  </div>
+</section>
+
+<section class="cgm">
+  <div class="wrap">
+    <div class="cgm-imgs">
+      <img src="img/lingo-2.jpg" alt="Abbott Lingo sensor" loading="lazy">
+      <img src="img/lingo-1.jpg" alt="Lingo app" loading="lazy">
+      <img src="img/lingo-6.jpg" alt="Lingo sensor on the arm" loading="lazy">
+    </div>
+    <div>
+      <p class="eyebrow">Included in your course</p>
+      <h2>Your own glucose data, <b>not averages.</b></h2>
+      <p class="lead">Every student receives an Abbott Lingo continuous glucose monitor, shipped to the door. You learn to read it in class, then build your protocol on what it shows.</p>
+      <ul class="checks">
+        <li>14-day sensor, water-resistant and painless to apply</li>
+        <li>Full Lingo app access on iOS and Android</li>
+        <li>No prescription needed</li>
+        <li>One sensor per student, shipped to US addresses</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="faculty" style="background:var(--ice)">
+  <div class="wrap">
+    <div class="head center">
+      <p class="eyebrow">Your faculty</p>
+      <h2>Taught by leading voices <b>in longevity.</b></h2>
+      <p class="lead">Certified specialists and researchers. Live in every class, answering your questions.</p>
+    </div>
+    <div class="fac-grid">
+      <article class="fac julie-card"><div class="ph"><img src="img/julie.jpg" alt="Julie Gibson Clark" loading="lazy"></div><div class="tx"><h3>Julie Gibson Clark</h3><p>2nd slowest-aging woman on earth. Founding Faculty. Hosts the VIP Masterclass.</p></div></article>
+      <article class="fac"><div class="ph"><img src="img/natalie.jpg" alt="Natalie Blackbourne" loading="lazy"></div><div class="tx"><h3>Natalie Blackbourne</h3><p>Longevity researcher and educator. M.S. Emotional Intelligence.</p></div></article>
+      <article class="fac"><div class="ph"><img src="img/courtney.jpg" alt="Courtney Donofrio" loading="lazy"></div><div class="tx"><h3>Courtney Donofrio</h3><p>IIN-certified integrative nutrition health coach.</p></div></article>
+      <article class="fac"><div class="ph"><img src="img/amy.jpg" alt="Amy Jamieson" loading="lazy"></div><div class="tx"><h3>Amy Jamieson</h3><p>Senior Lecturer, UC Santa Barbara. M.S. Health Science and Kinesiology.</p></div></article>
+      <article class="fac"><div class="ph"><img class="jordan" src="img/jordan.jpg" alt="Jordan Lattimore" loading="lazy"></div><div class="tx"><h3>Jordan Lattimore</h3><p>Behavioral and education specialist. B.Sc. Psychology.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="about dark">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">About us</p>
+      <h2>Longevity Life Academy</h2>
+      <p class="lead" style="margin-top:18px">We built the Academy on one belief: everyone deserves a science-backed protocol for a longer, healthier life. Leading longevity experts teach live, on eTeacher Group's learning platform.</p>
+      <div class="powered"><img src="img/eteacher.png" alt="eTeacher Group"><span>Powered by eTeacher Group</span></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>400k+</b><span>Students worldwide</span></div>
+      <div class="stat"><b>197</b><span>Countries</span></div>
+      <div class="stat"><b>25 yrs</b><span>Of online education</span></div>
+      <div class="stat"><b>8 to 15</b><span>Students per live class</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="head center"><p class="eyebrow">FAQ</p><h2>Questions, <b>answered.</b></h2></div>
+    <div class="faq-list">
+      <details><summary>How much does it cost?</summary><p>$79 for your first month, 55% off the regular $169. After that, $169 a month. The Abbott Lingo sensor, the learning platform and Julie's VIP Masterclass are included.</p></details>
+      <details><summary>What if I can't attend a class live?</summary><p>Every class is recorded. You can watch it later and bring your questions to the next live class.</p></details>
+      <details><summary>When does it start?</summary><p>Choose Monday, November 23 at 8:00 PM ET, or Wednesday, November 25 at 12:00 PM ET. Your class meets at the same time every week for 18 weeks.</p></details>
+      <details><summary>Does Julie teach the course?</summary><p>Julie hosts the VIP Masterclass on November 14. The 18-week course is taught by Longevity Life Academy's certified longevity faculty.</p></details>
+      <details><summary>Do I need a prescription for the glucose sensor?</summary><p>No. The Abbott Lingo sensor needs no prescription. It ships to US addresses, one per student.</p></details>
+      <details><summary>What if it is not for me?</summary><p>Tell us within 14 days of registration and your course fee is refunded in full.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final dark">
+  <div class="wrap">
+    <p class="eyebrow">November offer</p>
+    <h2>Start your protocol <b>for $79.</b></h2>
+    <p class="lead">55% off your first month, Julie's VIP Masterclass included, 14-day try-out refund.</p>
+    <a class="btn btn-blue" href="#pricing">Enroll now <span class="arr">&rarr;</span></a>
+    <small>When a session fills, it closes.</small>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo.png" alt="Longevity Life Academy">
+    <div><a href="https://www.longevitylifeacademy.com/privacy.html">Privacy</a><a href="https://www.longevitylifeacademy.com/cancellation.html">Cancellation policy</a><a href="https://www.longevitylifeacademy.com/support/">Support</a></div>
+    <div>&copy; eTeacher Group, Longevity Life Academy. Not medical advice. Education only.</div>
+  </div>
+</footer>
+
+<div class="floater" id="floater" aria-hidden="true">
+  <div class="fl-txt"><span class="fl-k">November offer · 55% off</span><span class="fl-v"><s>$169</s><b>$79</b> your first month</span></div>
+  <a class="btn btn-blue" href="#pricing">Enroll now</a>
+</div>
+
+<script>
+(function(){
+  var f=document.getElementById('floater'),hero=document.querySelector('.hero'),pricing=document.getElementById('pricing'),fin=document.querySelector('.final');
+  function upd(){var y=window.scrollY,h=hero.offsetHeight,pt=pricing.getBoundingClientRect();var show=y>h*0.6&&!(pt.top<innerHeight*0.6&&pt.bottom>innerHeight*0.3)&&!(fin&&fin.getBoundingClientRect().top<innerHeight*0.8);f.classList.toggle('show',show);f.setAttribute('aria-hidden',show?'false':'true');}
+  addEventListener('scroll',upd,{passive:true});upd();
+  document.querySelectorAll('[data-enroll]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();document.getElementById('previewNote').classList.add('show');});});
+})();
+</script>
+</body>
+</html>
