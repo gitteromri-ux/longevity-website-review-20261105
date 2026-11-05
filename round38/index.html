@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Final website review, round 38 • Longevity Life Academy</title>
+<style>
+:root{font-family:Arial,Helvetica,sans-serif;color:#eaf0fc;background:#101724;font-size:16px}*{box-sizing:border-box}body{margin:0}header{padding:32px max(24px,4vw);border-bottom:1px solid #344154;background:#141e2f}h1{font-size:clamp(26px,3vw,38px);letter-spacing:-1px;margin:8px 0 12px}p{color:#afbdd2;line-height:1.5;margin:8px 0}.top{font-size:13px;letter-spacing:2px;color:#84b9ff}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}button,.open{font:inherit;border:1px solid #4b5d77;border-radius:8px;background:#22324b;color:#fff;padding:11px 16px;cursor:pointer;text-decoration:none}button:hover,.open:hover{background:#314969}button.primary{background:#1868de;border-color:#1868de}#progress{margin-left:auto;align-self:center;color:#a9cfff;font-size:14px}main{max-width:1700px;margin:auto;padding:24px 24px 60px}.card{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(300px,1fr);border:1px solid #344154;border-radius:12px;background:#172133;margin-bottom:24px;overflow:hidden;scroll-margin-top:20px}.visual{padding:16px;background:#0a101b;display:flex;flex-direction:column;justify-content:center}.visual img{width:100%;height:auto;display:block;cursor:zoom-in;border-radius:5px}.caption{display:flex;justify-content:space-between;align-items:center;margin-top:12px;gap:12px}.caption span{color:#8e9bb1;font-size:13px}.open{font-size:13px;padding:7px 10px}.note{padding:24px;display:flex;flex-direction:column;gap:14px}.number{color:#80b5ff;font-size:13px;letter-spacing:1px}h2{font-size:22px;margin:0}textarea{flex:1;min-height:210px;width:100%;resize:vertical;border:1px solid #566680;border-radius:8px;padding:16px;color:#f7f9fe;background:#0e1727;font:16px/1.6 Arial,sans-serif}textarea:focus{outline:2px solid #6eafff;outline-offset:2px}textarea::placeholder{color:#92a1b7}.save{font-size:13px;min-height:20px;color:#9fbbd8}.note label{font-size:14px;color:#c8d5e9}.notice{font-size:14px;max-width:940px}#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#f1f6ff;color:#0f223b;padding:13px 22px;border-radius:9px;box-shadow:0 8px 40px #0007;display:none;z-index:10}.jump{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.jump a{color:#c0d8ff;text-decoration:none;padding:7px 11px;background:#22324b;border-radius:5px}.jump a.ok{background:#14532d}.jump a.has{background:#1868de}.jump a:focus-visible{outline:2px solid white}
+.tabs{display:flex;gap:12px;flex-wrap:wrap;max-width:1700px;margin:24px auto 0;padding:0 24px}.tabs button[aria-selected=true]{background:#1868de;border-color:#1868de}
+.visual.phone img{max-width:430px;margin:0 auto}
+.ok-row{display:flex;align-items:center;gap:12px;padding:14px 16px;border:1px solid #4b5d77;border-radius:8px;background:#0e1727;cursor:pointer;font-size:17px;color:#fff}
+.ok-row input{width:24px;height:24px;accent-color:#2fbf71;cursor:pointer}
+.card.approved{border-color:#2fbf71}.card.approved .ok-row{border-color:#2fbf71;background:#123524}
+.card.commented{border-color:#1868de}
+#receipt{margin-top:14px;font-size:15px;color:#cfe3ff}#receipt a{color:#9cc8ff}
+@media(max-width:780px){header{padding:24px 18px}main{padding:18px 12px}.card{grid-template-columns:1fr}.note{padding:20px}#progress{margin-left:0;width:100%}textarea{min-height:180px}.tabs{padding:0 12px}}
+@media print{header .actions,.jump,.open,#toast,.tabs{display:none}.card{break-inside:avoid}body{background:white;color:black}.note,.card{background:white}textarea{color:black;background:white}}
+</style></head><body>
+<header><div class="top">LONGEVITY LIFE ACADEMY / FINAL WEBSITE FOR META / ROUND 38</div><h1>Every fold, in page order. Your exact comments.</h1>
+<p>20 folds of the current build, phone and desktop. Check <b>Approved</b> on each fold that is right. Write the exact change beside each fold that is not.</p>
+<p class="notice">Live page: <a class="open" href="https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/" target="_blank" rel="noopener">Open the final website</a> Comments and checkboxes save in this browser. When you are done, press <b>Send review to GitHub</b> and then <b>Submit new issue</b> on GitHub; that hands the full list to Claude. <b>Download comments</b> and <b>Copy all comments</b> work too.</p>
+<div class="actions"><button class="primary" id="send">Send review to GitHub</button><button id="download">Download comments</button><button id="copy">Copy all comments</button><button id="backup">Download editable backup</button><button id="restore">Restore backup</button><span id="progress" aria-live="polite"></span></div>
+<div id="receipt" aria-live="polite"></div>
+<input type="file" id="import" accept=".json,application/json" hidden><nav class="jump" aria-label="Jump to fold"></nav></header>
+<nav class="tabs" aria-label="Screenshot size"><button id="tab-phone" aria-selected="true">Phone (iPhone 14)</button><button id="tab-desktop" aria-selected="false">Desktop (1440 wide)</button></nav>
+<main id="cards"></main><div id="toast" role="status"></div>
+<script>
+const KEY='lla-meta-final-review-round38-v1';
+const ISSUES='https://github.com/gitteromri-ux/longevity-website-review-20261105/issues/new';
+const folds=[['01','Hero'],['02','Six pillars'],['03','What you learn'],['04','CGM'],['05','Julie VIP Masterclass'],['06','Pricing'],['07','How it works'],['08','About'],['09','Client logos'],['10','Instructors'],['11','Six Systems'],['12','Blog'],['13','Reviews'],['14','Course includes'],['15','Why different'],['16','Quiz'],['17','FAQ'],['18','Application form'],['19','Final banner'],['20','Footer']].map(([n,t])=>({n,t,file:`${n}-${t.replace(/ /g,'-')}.jpg`}));
+let st={},view='phone',storageOK=true;try{st=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){storageOK=false}
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const get=f=>({ok:false,comment:'',...(st[f.n]||{})});
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st));storageOK=true}catch(e){storageOK=false;toast('Browser storage unavailable. Download a backup before closing.')}progress()}
+function toast(s){const t=document.querySelector('#toast');t.textContent=s;t.style.display='block';setTimeout(()=>t.style.display='none',3500)}
+function render(){
+ document.querySelector('#cards').innerHTML=folds.map(f=>{const s=get(f),img=`${view}/${f.file}`;return `<article class="card${s.ok?' approved':''}${s.comment.trim()?' commented':''}" id="fold-${f.n}" data-n="${f.n}"><div class="visual ${view}"><a href="${img}" target="_blank" rel="noopener" aria-label="Open fold ${f.n} at full size"><img src="${img}" alt="Fold ${f.n}, ${esc(f.t)}, ${view} view" loading="lazy"></a><div class="caption"><span>${view==='phone'?'iPhone 14':'Desktop 1440'} · fold ${f.n} of 20</span><a class="open" href="${img}" target="_blank" rel="noopener">Open full size</a></div></div><div class="note"><div class="number">FOLD ${f.n} OF 20</div><h2>${esc(f.t)}</h2><label class="ok-row"><input type="checkbox" class="ok"${s.ok?' checked':''}> Approved as is</label><label for="c-${f.n}">What is wrong, and the exact change</label><textarea id="c-${f.n}" class="comment" placeholder="Write the fault and the exact change for this fold.">${esc(s.comment)}</textarea><div class="save"></div></div></article>`}).join('');
+ document.querySelectorAll('.card').forEach(card=>{const n=card.dataset.n,ok=card.querySelector('.ok'),c=card.querySelector('.comment'),sv=card.querySelector('.save');
+  const upd=()=>{st[n]={ok:ok.checked,comment:c.value};card.classList.toggle('approved',ok.checked);card.classList.toggle('commented',!!c.value.trim());save();sv.textContent=storageOK?'Saved in this browser.':'Not saved. Download a backup.'};
+  ok.onchange=upd;c.oninput=upd});
+ progress();
+}
+function progress(){const a=folds.filter(f=>get(f).ok).length,c=folds.filter(f=>get(f).comment.trim()).length;document.querySelector('#progress').textContent=`${a} approved · ${c} with comments · 20 folds`;
+ document.querySelector('.jump').innerHTML=folds.map(f=>{const s=get(f);return `<a href="#fold-${f.n}" class="${s.comment.trim()?'has':s.ok?'ok':''}">${f.n}</a>`}).join('')}
+function markdown(){return '# Final website for Meta: round 38 review\n\nLive page: https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/\n\n'+folds.map(f=>{const s=get(f);const state=s.comment.trim()?'NEEDS CHANGE':s.ok?'APPROVED':'NOT REVIEWED';return `## ${f.n}. ${f.t}: ${state}\n\n${s.comment.trim()||(s.ok?'Approved as is.':'No comment.')}\n`}).join('\n')}
+function issueText(){const base=new URL('.',location.href).href;return '# Final website for Meta: round 38 review\n\nLive page: https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/\nReview board: '+location.origin+location.pathname+'\n\n'+folds.map(f=>{const s=get(f);if(s.comment.trim())return `## ${f.n}. ${f.t}: NEEDS CHANGE\n[Phone](${base}phone/${f.file}) · [Desktop](${base}desktop/${f.file})\n\n${s.comment.trim()}\n`;return `## ${f.n}. ${f.t}: ${s.ok?'APPROVED':'NOT REVIEWED'}\n`}).join('\n')}
+function download(name,text,type){const u=URL.createObjectURL(new Blob([text],{type})),a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
+document.querySelector('#download').onclick=()=>{download('Final-Website-Round38-Comments.md',markdown(),'text/markdown;charset=utf-8');toast('Comments download started.')};
+document.querySelector('#copy').onclick=async()=>{try{await navigator.clipboard.writeText(markdown());toast('All comments copied.')}catch(e){download('Final-Website-Round38-Comments.md',markdown(),'text/markdown;charset=utf-8');toast('Clipboard unavailable. Comments downloaded instead.')}};
+document.querySelector('#backup').onclick=()=>download('Final-Website-Round38-Backup.json',JSON.stringify({version:1,round:38,state:st},null,2),'application/json');
+document.querySelector('#restore').onclick=()=>document.querySelector('#import').click();
+document.querySelector('#import').onchange=async e=>{try{const d=JSON.parse(await e.target.files[0].text());if(!d.state||typeof d.state!=='object')throw Error();for(const f of folds)if(d.state[f.n])st[f.n]={ok:!!d.state[f.n].ok,comment:String(d.state[f.n].comment||'')};save();render();toast('Backup restored.')}catch(err){toast('That file is not a backup from this board.')}e.target.value=''};
+document.querySelector('#send').onclick=()=>{
+ const a=folds.filter(f=>get(f).ok).length,c=folds.filter(f=>get(f).comment.trim()).length;
+ if(!a&&!c){toast('Check Approved or write a comment first.');return}
+ const body=issueText(),title='Final website round 38 review: '+new Date().toISOString().slice(0,10);
+ const url=ISSUES+'?title='+encodeURIComponent(title)+'&body='+encodeURIComponent(body);
+ const r=document.querySelector('#receipt');
+ if(url.length<=7500){window.open(url,'_blank','noopener');r.innerHTML='Your review is ready on GitHub. <a target="_blank" rel="noopener" href="'+esc(url)+'">Open the prepared GitHub issue</a> and click <b>Submit new issue</b>.'}
+ else{download('Final-Website-Round38-Review.md',body,'text/markdown;charset=utf-8');navigator.clipboard?.writeText(body).catch(()=>{});const u2=ISSUES+'?title='+encodeURIComponent(title);window.open(u2,'_blank','noopener');r.innerHTML='Your review is long, so it was copied and downloaded. <a target="_blank" rel="noopener" href="'+esc(u2)+'">Open the GitHub issue</a>, paste, and click <b>Submit new issue</b>. Nothing was lost.'}
+};
+function setView(v){view=v;document.querySelector('#tab-phone').setAttribute('aria-selected',String(v==='phone'));document.querySelector('#tab-desktop').setAttribute('aria-selected',String(v==='desktop'));render()}
+document.querySelector('#tab-phone').onclick=()=>setView('phone');document.querySelector('#tab-desktop').onclick=()=>setView('desktop');
+render();if(!storageOK)toast('Browser storage unavailable. Download a backup before closing.');
+</script></body></html>
